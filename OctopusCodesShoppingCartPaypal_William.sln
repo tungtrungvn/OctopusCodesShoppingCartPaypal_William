@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctopusCodesShoppingCartPaypal.App", "OctopusCodes.App\OctopusCodesShoppingCartPaypal.App.csproj", "{8BD36D2B-0730-41C0-86C3-098BBD3E39BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctopusCodesShoppingCartPaypal.Core", "OctopusCodesShoppingCartPaypal.Core\OctopusCodesShoppingCartPaypal.Core.csproj", "{2055CE34-DB09-4A1D-88B7-D76C7A982BA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctopusCodesShoppingCartPaypal.Models", "OctopusCodesShoppingCartPaypal.Models\OctopusCodesShoppingCartPaypal.Models.csproj", "{F8C9D492-B9FB-47B3-94CB-C37BA6F67764}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{89DF9A8D-BB54-4CE3-AAB4-6FAF0ACBF782}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BD36D2B-0730-41C0-86C3-098BBD3E39BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD36D2B-0730-41C0-86C3-098BBD3E39BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD36D2B-0730-41C0-86C3-098BBD3E39BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD36D2B-0730-41C0-86C3-098BBD3E39BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2055CE34-DB09-4A1D-88B7-D76C7A982BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2055CE34-DB09-4A1D-88B7-D76C7A982BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2055CE34-DB09-4A1D-88B7-D76C7A982BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2055CE34-DB09-4A1D-88B7-D76C7A982BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C9D492-B9FB-47B3-94CB-C37BA6F67764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C9D492-B9FB-47B3-94CB-C37BA6F67764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C9D492-B9FB-47B3-94CB-C37BA6F67764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C9D492-B9FB-47B3-94CB-C37BA6F67764}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
