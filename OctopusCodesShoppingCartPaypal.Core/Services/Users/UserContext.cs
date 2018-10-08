@@ -1,4 +1,5 @@
-﻿using OctopusCodesShoppingCartPaypal.Models.Entities;
+﻿using OctopusCodesShoppingCartPaypal.Core.Utils;
+using OctopusCodesShoppingCartPaypal.Models.Entities;
 using OctopusCodesShoppingCartPaypal.Models.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Services.Users
         public Account Login(string username, string password)
         {
             password = UtilEncrypt.GetMd5Hash(password);
+            return Repository.GetAll(a => a.Username.Equals(username) && a.Password.Equals(password)).FirstOrDefault();
 
         }
 

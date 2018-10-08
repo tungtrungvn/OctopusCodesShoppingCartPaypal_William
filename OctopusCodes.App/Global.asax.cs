@@ -16,6 +16,13 @@ using datatables.Utils.ModelBinder;
 using System.Web.Security;
 using Newtonsoft.Json;
 using OctopusCodes.App.Securities;
+using OctopusCodesShoppingCartPaypal.Core.Services.Users;
+using OctopusCodesShoppingCartPaypal.Core.Services.Products;
+using OctopusCodesShoppingCartPaypal.Core.Services.Categories;
+using OctopusCodesShoppingCartPaypal.Core.Services.Orders;
+using OctopusCodesShoppingCartPaypal.Core.Services.Settings;
+using OctopusCodesShoppingCartPaypal.Core.Services.Permissions;
+using OctopusCodesShoppingCartPaypal.Core.Services.Coupons;
 
 //Test Commit
 namespace OctopusCodes.App
@@ -47,14 +54,14 @@ namespace OctopusCodes.App
 
             builder.RegisterType<OctopusCodesShoppingCartPaypalEntities>().InstancePerRequest();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
-            //builder.RegisterType<UserContext>().As<IUserContext>().InstancePerDependency();
-            //builder.RegisterType<ProductService>().As<IProductService>();
-            //builder.RegisterType<CategoryService>().As<ICategoryService>();
-            //builder.RegisterType<OrdersService>().As<IOrdersService>();
-            //builder.RegisterType<SettingService>().As<ISettingService>();
-            //builder.RegisterType<PermissionService>().As<IPermissionService>();
-            //builder.RegisterType<CouponService>().As<ICouponService>();
-            //builder.RegisterType<UserService>().As<IUserService>();
+            builder.RegisterType<UserContext>().As<IUserContext>().InstancePerDependency();
+            builder.RegisterType<ProductService>().As<IProductService>();
+            builder.RegisterType<CategoryService>().As<ICategoryService>();
+            builder.RegisterType<OrdersService>().As<IOrdersService>();
+            builder.RegisterType<SettingService>().As<ISettingService>();
+            builder.RegisterType<PermissionService>().As<IPermissionService>();
+            builder.RegisterType<CouponService>().As<ICouponService>();
+            builder.RegisterType<UserService>().As<IUserService>();
 
             #endregion
 
