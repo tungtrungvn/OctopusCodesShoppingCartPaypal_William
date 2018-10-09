@@ -57,8 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Coupons\CouponViewModel.cs" />
+    <Compile Include="Models\datatables\DatatableData.cs" />
+    <Compile Include="Models\datatables\DatatableModel.cs" />
     <Compile Include="Models\MessageModels\NotifyModel.cs" />
     <Compile Include="Models\Orders\CartViewModel.cs" />
+    <Compile Include="Models\Products\ProductDetailViewModel.cs" />
     <Compile Include="Models\Settings\SettingVIewModel.cs" />
     <Compile Include="Models\Users\UserViewModel.cs" />
     <Compile Include="Provider\Constants.cs" />

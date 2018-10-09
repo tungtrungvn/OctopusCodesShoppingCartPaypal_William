@@ -22,7 +22,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OctopusCodesShoppingCartPaypal.Core.Resources.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Added to cart.
         /// </summary>
-        internal static string AddedToCart {
+        public static string AddedToCart {
             get {
                 return ResourceManager.GetString("AddedToCart", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Amount of item.
         /// </summary>
-        internal static string AmountItem {
+        public static string AmountItem {
             get {
                 return ResourceManager.GetString("AmountItem", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cart.
         /// </summary>
-        internal static string Cart {
+        public static string Cart {
             get {
                 return ResourceManager.GetString("Cart", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cart item.
         /// </summary>
-        internal static string CartItem {
+        public static string CartItem {
             get {
                 return ResourceManager.GetString("CartItem", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Checkout.
         /// </summary>
-        internal static string Checkout {
+        public static string Checkout {
             get {
                 return ResourceManager.GetString("Checkout", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Copyright &amp;copy; 2016 OctopusCodes. All rights reserved..
         /// </summary>
-        internal static string CopyRight {
+        public static string CopyRight {
             get {
                 return ResourceManager.GetString("CopyRight", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Counpon code.
         /// </summary>
-        internal static string CouponCode {
+        public static string CouponCode {
             get {
                 return ResourceManager.GetString("CouponCode", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} is not found.
         /// </summary>
-        internal static string DataIsNotFound {
+        public static string DataIsNotFound {
             get {
                 return ResourceManager.GetString("DataIsNotFound", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Delete {0} success.
         /// </summary>
-        internal static string DeleteItemSuccess {
+        public static string DeleteItemSuccess {
             get {
                 return ResourceManager.GetString("DeleteItemSuccess", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string DesignBy {
+        public static string DesignBy {
             get {
                 return ResourceManager.GetString("DesignBy", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string Designer {
+        public static string Designer {
             get {
                 return ResourceManager.GetString("Designer", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string DesignUrl {
+        public static string DesignUrl {
             get {
                 return ResourceManager.GetString("DesignUrl", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Your cart is empty, please add somethings intto your cart.
         /// </summary>
-        internal static string EmptyCart {
+        public static string EmptyCart {
             get {
                 return ResourceManager.GetString("EmptyCart", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Have updated cart.
         /// </summary>
-        internal static string HaveUpdatedCart {
+        public static string HaveUpdatedCart {
             get {
                 return ResourceManager.GetString("HaveUpdatedCart", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Actions.
         /// </summary>
-        internal static string HeaderActions {
+        public static string HeaderActions {
             get {
                 return ResourceManager.GetString("HeaderActions", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
-        internal static string HeaderAmount {
+        public static string HeaderAmount {
             get {
                 return ResourceManager.GetString("HeaderAmount", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Coupon.
         /// </summary>
-        internal static string HeaderCoupon {
+        public static string HeaderCoupon {
             get {
                 return ResourceManager.GetString("HeaderCoupon", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Created Date.
         /// </summary>
-        internal static string HeaderCreatedDate {
+        public static string HeaderCreatedDate {
             get {
                 return ResourceManager.GetString("HeaderCreatedDate", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        internal static string HeaderDescription {
+        public static string HeaderDescription {
             get {
                 return ResourceManager.GetString("HeaderDescription", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Item.
         /// </summary>
-        internal static string HeaderItem {
+        public static string HeaderItem {
             get {
                 return ResourceManager.GetString("HeaderItem", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Price.
         /// </summary>
-        internal static string HeaderPrice {
+        public static string HeaderPrice {
             get {
                 return ResourceManager.GetString("HeaderPrice", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Product.
         /// </summary>
-        internal static string HeaderProduct {
+        public static string HeaderProduct {
             get {
                 return ResourceManager.GetString("HeaderProduct", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
-        internal static string HeaderQuantity {
+        public static string HeaderQuantity {
             get {
                 return ResourceManager.GetString("HeaderQuantity", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
-        internal static string HeaderStatus {
+        public static string HeaderStatus {
             get {
                 return ResourceManager.GetString("HeaderStatus", resourceCulture);
             }
@@ -279,16 +279,16 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Total.
         /// </summary>
-        internal static string HeaderTotal {
+        public static string HeaderTotal {
             get {
                 return ResourceManager.GetString("HeaderTotal", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Internal exceptions.
+        ///   Looks up a localized string similar to public exceptions.
         /// </summary>
-        internal static string InternalException {
+        public static string InternalException {
             get {
                 return ResourceManager.GetString("InternalException", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} data is invalid.
         /// </summary>
-        internal static string InvalidData {
+        public static string InvalidData {
             get {
                 return ResourceManager.GetString("InvalidData", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Invoice.
         /// </summary>
-        internal static string Invoice {
+        public static string Invoice {
             get {
                 return ResourceManager.GetString("Invoice", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Item.
         /// </summary>
-        internal static string Item {
+        public static string Item {
             get {
                 return ResourceManager.GetString("Item", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Add to cart.
         /// </summary>
-        internal static string LabelAddToCart {
+        public static string LabelAddToCart {
             get {
                 return ResourceManager.GetString("LabelAddToCart", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Availability.
         /// </summary>
-        internal static string LabelAvailability {
+        public static string LabelAvailability {
             get {
                 return ResourceManager.GetString("LabelAvailability", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Buy Them.
         /// </summary>
-        internal static string LabelBuyThem {
+        public static string LabelBuyThem {
             get {
                 return ResourceManager.GetString("LabelBuyThem", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to CouponCode.
         /// </summary>
-        internal static string LabelCouponCode {
+        public static string LabelCouponCode {
             get {
                 return ResourceManager.GetString("LabelCouponCode", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to List Categories.
         /// </summary>
-        internal static string LabelDefaultCategoryItem {
+        public static string LabelDefaultCategoryItem {
             get {
                 return ResourceManager.GetString("LabelDefaultCategoryItem", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        internal static string LabelHome {
+        public static string LabelHome {
             get {
                 return ResourceManager.GetString("LabelHome", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to OR.
         /// </summary>
-        internal static string LabelOr {
+        public static string LabelOr {
             get {
                 return ResourceManager.GetString("LabelOr", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Keep me signed in.
         /// </summary>
-        internal static string LabelRememberMe {
+        public static string LabelRememberMe {
             get {
                 return ResourceManager.GetString("LabelRememberMe", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Shopping Cart.
         /// </summary>
-        internal static string LabelShoppingCart {
+        public static string LabelShoppingCart {
             get {
                 return ResourceManager.GetString("LabelShoppingCart", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Summary.
         /// </summary>
-        internal static string LabelSummary {
+        public static string LabelSummary {
             get {
                 return ResourceManager.GetString("LabelSummary", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string Login {
+        public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Logout.
         /// </summary>
-        internal static string LogOut {
+        public static string LogOut {
             get {
                 return ResourceManager.GetString("LogOut", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Have errors when store.
         /// </summary>
-        internal static string MsgBuyItemFaild {
+        public static string MsgBuyItemFaild {
             get {
                 return ResourceManager.GetString("MsgBuyItemFaild", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Buy item success.
         /// </summary>
-        internal static string MsgBuyItemSuccess {
+        public static string MsgBuyItemSuccess {
             get {
                 return ResourceManager.GetString("MsgBuyItemSuccess", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to {0} is not found.
         /// </summary>
-        internal static string MsgIsNotFound {
+        public static string MsgIsNotFound {
             get {
                 return ResourceManager.GetString("MsgIsNotFound", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Product {0} has {1} in stock.
         /// </summary>
-        internal static string MsgProductOutStock {
+        public static string MsgProductOutStock {
             get {
                 return ResourceManager.GetString("MsgProductOutStock", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to User {0} is not found.
         /// </summary>
-        internal static string MsgUserNotFound {
+        public static string MsgUserNotFound {
             get {
                 return ResourceManager.GetString("MsgUserNotFound", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Orders.
         /// </summary>
-        internal static string Orders {
+        public static string Orders {
             get {
                 return ResourceManager.GetString("Orders", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Product.
         /// </summary>
-        internal static string Product {
+        public static string Product {
             get {
                 return ResourceManager.GetString("Product", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Profile.
         /// </summary>
-        internal static string Profile {
+        public static string Profile {
             get {
                 return ResourceManager.GetString("Profile", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string Register {
+        public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to List Item.
         /// </summary>
-        internal static string TitleOrderDetail {
+        public static string TitleOrderDetail {
             get {
                 return ResourceManager.GetString("TitleOrderDetail", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Manage Orders.
         /// </summary>
-        internal static string TitleOrderIndex {
+        public static string TitleOrderIndex {
             get {
                 return ResourceManager.GetString("TitleOrderIndex", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Home Page.
         /// </summary>
-        internal static string TitleUserHomePage {
+        public static string TitleUserHomePage {
             get {
                 return ResourceManager.GetString("TitleUserHomePage", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to View Cart.
         /// </summary>
-        internal static string TitleViewCart {
+        public static string TitleViewCart {
             get {
                 return ResourceManager.GetString("TitleViewCart", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace OctopusCodesShoppingCartPaypal.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to User.
         /// </summary>
-        internal static string User {
+        public static string User {
             get {
                 return ResourceManager.GetString("User", resourceCulture);
             }
