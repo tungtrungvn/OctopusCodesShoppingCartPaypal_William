@@ -61,6 +61,7 @@
     <Compile Include="Models\datatables\DatatableModel.cs" />
     <Compile Include="Models\MessageModels\NotifyModel.cs" />
     <Compile Include="Models\Orders\CartViewModel.cs" />
+    <Compile Include="Models\Orders\OrdersViewModel.cs" />
     <Compile Include="Models\Products\ProductDetailViewModel.cs" />
     <Compile Include="Models\Settings\SettingVIewModel.cs" />
     <Compile Include="Models\Users\UserClientLoginViewModel.cs" />
