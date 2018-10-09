@@ -203,6 +203,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,6 +232,7 @@
     <Folder Include="Views\Category\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Orders\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OctopusCodesShoppingCartPaypal.Core\OctopusCodesShoppingCartPaypal.Core.csproj">
