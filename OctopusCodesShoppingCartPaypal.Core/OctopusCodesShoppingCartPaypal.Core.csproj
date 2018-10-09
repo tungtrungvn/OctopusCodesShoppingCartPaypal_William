@@ -63,6 +63,8 @@
     <Compile Include="Models\Orders\CartViewModel.cs" />
     <Compile Include="Models\Products\ProductDetailViewModel.cs" />
     <Compile Include="Models\Settings\SettingVIewModel.cs" />
+    <Compile Include="Models\Users\UserClientLoginViewModel.cs" />
+    <Compile Include="Models\Users\UserLoginViewModel.cs" />
     <Compile Include="Models\Users\UserViewModel.cs" />
     <Compile Include="Provider\Constants.cs" />
     <Compile Include="Resources\Resource.Designer.cs">
