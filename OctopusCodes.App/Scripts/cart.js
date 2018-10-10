@@ -19,10 +19,38 @@ function onAddItem(item, user) {
         type: 'post',
         data: { productId: item },
         success: function (data) {
+            //show Message
+
+            /*
+            var message = {
+                show: onMessageShow,
+                close: onMessageClose,
+            };
+             
+            result = true (success) or false (fail)
+            message = Item added to cart or error
+
+            function onMessageShow(result,message) {
+                var alertClass = "alert-danger";
+                if (result == true) alertClass = "alert-success";
+                var $notifyMessage = $('#notify-message');
+                var $notify = $(notify);
+                $notify.attr('id', 'alert-wrapper');
+                $notify.addClass(alertClass);
+                $notify.append(message);
+                $notifyMessage.append($notify);
+                $notifyMessage.show(600);
+                setTimeout(onMessageClose,3000);
+            }
+            */
+
             message.show(data.Result, data.Message);
+
+            //var CART_QUANTITY = '#cart-quantity';
             $(CART_QUANTITY).text(data.Amount);
         },
         complete: function () {
+            //stop spinner on ajax complete
             spinner.close();
         }
     });

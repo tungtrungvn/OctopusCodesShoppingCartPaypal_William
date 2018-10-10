@@ -188,7 +188,28 @@
             } else {
                 $('#features_items').html('');
             }
+        }   
+        function addToCart(id) {
+            cart.addItem(id);
         }
+        $(function () {
+            //create click event for class categoryItem under id categoryMenu
+            $('#categoryMenu').on('click', '.categoryItem', function (e) {
+                //prevent call to server when link is clicked.
+                //this url http://octopuscodesshoppingcartpaypal_william/Home/Index/10 will not be shown in url, 
+                //instead it just shows http://octopuscodesshoppingcartpaypal_william/
+                e.preventDefault();
+                var $this = $(this);
+                //set categoryId = parameter id of link's value (ex : categoryId = 10 -> http://octopuscodesshoppingcartpaypal_william/Home/Index/10)
+                var categoryId = $this.data('id');
+                //set hidden html of categoryId value with categoryId
+                //<input type="hidden" value="" id="categoryId">
+                $('#categoryId').val(categoryId);
+                //call loadItems (categoryId, index = 1)
+                //when category menu is clicked, its index is 1
+                loadItems(categoryId, 1);
+            });
+        });
 
     </script>
 }
