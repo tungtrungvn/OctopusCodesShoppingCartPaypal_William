@@ -31,14 +31,28 @@ namespace OctopusCodes.App.Controllers
             return View();
         }
 
+        //datatableRequest Property Value
+        //-----------------------------------
+        //Data=null
+        //Index=1
+        //Page=0
+        //Size=9
+        //StartIndex=0
+        //Total=0
         public ActionResult GetItems(DatatableData<ProductViewModel> datatableRequest, int? categoryId)
         {
             var imgPath = Constants.ImagePath + "/";
+            //entities is of type IQueryable<Product>
             var entities = _productService.GetAll().Where(a => a.Status == (int)Constants.EnumProductStatus.Stocking);
             if (categoryId.HasValue && categoryId > 0)
             {
                 entities = entities.Where(a => a.CategoryId == categoryId.Value || a.Category.ParentId == categoryId);
             }
+            //models is of type IQueryable<ProductViewModel>
+            //Map Product.Id to ProductViewModel.Id, begitu juga pada Price, ProductName, Image
+            //Image -> get product images if any -> get main image -> then append it to image path , otherwise it's null
+            //Order by price ascending
+            //Convert Product which is mapped above to ProductViewModel
             var models = entities.Select(a => new ProductViewModel()
             {
                 Id = a.Id,

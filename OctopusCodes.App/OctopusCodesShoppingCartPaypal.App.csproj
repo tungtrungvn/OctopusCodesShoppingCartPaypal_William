@@ -254,6 +254,47 @@
     <Content Include="Scripts\sb-admin-2.js" />
     <Content Include="Scripts\site.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Upload\Product\1-2-3_va-va-vroom!20160722021649.jpg" />
+    <Content Include="Upload\Product\default_20160606010913.png" />
+    <Content Include="Upload\Product\default_20160606010933.png" />
+    <Content Include="Upload\Product\default_20160606010943.png" />
+    <Content Include="Upload\Product\default_20160606010953.png" />
+    <Content Include="Upload\Product\default_20160606011005.png" />
+    <Content Include="Upload\Product\default_20160606011015.png" />
+    <Content Include="Upload\Product\default_20160606011035.png" />
+    <Content Include="Upload\Product\default_20160606011048.png" />
+    <Content Include="Upload\Product\default_20160606011149.png" />
+    <Content Include="Upload\Product\default_20160606011456.png" />
+    <Content Include="Upload\Product\default_20160606011509.png" />
+    <Content Include="Upload\Product\default_20160606125431.png" />
+    <Content Include="Upload\Product\default_20160701011839.png" />
+    <Content Include="Upload\Product\default_20160701012537.png" />
+    <Content Include="Upload\Product\default_20160701012834.png" />
+    <Content Include="Upload\Product\dk_workbooks_coding_in_scratch_games_workbook20160722021336.jpg" />
+    <Content Include="Upload\Product\dk_workbooks_coding_with_scratch_workbook20160722021410.jpg" />
+    <Content Include="Upload\Product\dk_workbooks_science_pre-k20160722021504.jpg" />
+    <Content Include="Upload\Product\htc20160727074022.jpg" />
+    <Content Include="Upload\Product\inside-outside_dinosaurs20160722021607.jpg" />
+    <Content Include="Upload\Product\iphone20160722025523.png" />
+    <Content Include="Upload\Product\iphone_220160722025609.png" />
+    <Content Include="Upload\Product\little_red_hot20160722021543.jpg" />
+    <Content Include="Upload\Product\math_made_easy_fourth_grade_workbook20160722021209.jpg" />
+    <Content Include="Upload\Product\nokia_lumia_120160722025636.jpg" />
+    <Content Include="Upload\Product\nokia_lumia_220160722025659.jpg" />
+    <Content Include="Upload\Product\nokia_x220160722025721.jpg" />
+    <Content Include="Upload\Product\nokia_xl20160722025746.jpg" />
+    <Content Include="Upload\Product\phone_120160424024055.jpg" />
+    <Content Include="Upload\Product\phone_320160424024042.jpg" />
+    <Content Include="Upload\Product\phone_520160424024034.jpg" />
+    <Content Include="Upload\Product\phone_620160424021349.jpg" />
+    <Content Include="Upload\Product\phone_620160424021612.jpg" />
+    <Content Include="Upload\Product\phone_620160424021616.jpg" />
+    <Content Include="Upload\Product\phone_620160424021701.jpg" />
+    <Content Include="Upload\Product\phone_620160424022033.jpg" />
+    <Content Include="Upload\Product\phone_620160424022307.jpg" />
+    <Content Include="Upload\Product\productname20160424014214.jpg" />
+    <Content Include="Upload\Product\productname20160424014232.jpg" />
+    <Content Include="Upload\Product\sam_sum20160727073747.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +337,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Upload\Products\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Cart\" />

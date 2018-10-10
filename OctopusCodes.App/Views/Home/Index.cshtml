@@ -66,7 +66,7 @@
             params.Index = index;
             //call ajax via post methodd and pass params
             $.ajax({
-                ur: '/Home/GetItems',
+                url: '/Home/GetItems',
                 type: 'Post',
                 data: params,
                 success: function (response) {
@@ -81,6 +81,8 @@
     //index and params.categoryId will be undefined because it is not specified in drawItems method
     //Code below is the same as drawItems(response);
     //https://www.w3schools.com/js/js_function_parameters.asp
+                    console.log(response);
+                    
                     drawItems(response, index, params.categoryId);
                 }
             })
@@ -119,8 +121,73 @@
             return datatableRequest;
         }
 
-        function drawItems(response) {
+        //on first page load -> page = 2, index = 1, categoryid = undefined
+        var pagination = {
+            render: function (page, index, categoryid) {
+                var html = '';
+                for (var i = 1; i <= page; i++) {
+                    if (i == index) {
+                        html += '<li class="active"><a href="javascript:void(0)" onClick="loadItems(' + categoryid + ',' + i + ')">' + i + '</a></li>';
+                    } else
+                        html += '<li><a href="javascript:void(0)" onClick="loadItems(' + categoryid + ',' + i + ')">' + i + '</a></li>';
+                }
+                $('#features_items').find('#pagination').append(html);
+            }
+        };
 
+         /*
+                    Data: Array(9), Index: 1, Page: 2, Size: 9, Total: 13, …}
+                    Data: Array(9)
+                    0:
+                    Categories: null
+                    Category: null
+                    CategoryId: null
+                    Description: null
+                    Id: 1043
+                    Image: "/Upload/Product//nokia_lumia_120160722025636.jpg"
+                    ImageList: null
+                    Images: null
+                    MainImg: 0
+                    Price: 2
+                    ProductName: "Nokia Lumia 1"
+                    Quantity: null
+                    Status: 0
+                    StatusDictionary: null
+                    __proto__: Object
+                    length: 9
+                    __proto__: Array(0)
+                    Index: 1
+                    Page: 2
+                    Size: 9
+                    StartIndex: 0
+                    Total: 13
+                     */
+
+        function drawItems(response) {
+            var html = '';
+            var itemNumber = 3;
+            if (response != undefined && response.Data.length > 0)
+            {
+                $.each(response.Data, function (i, o) {
+                    html += '<div class="col-sm-4">' +
+                        '<div class="product-image-wrapper">' +
+                        '<div class="single-products">' +
+                        '<div class="productinfo text-center">' +
+                        '<a href="/Home/Detail/' + o.Id+'" class="image-wrapper">' +
+                        '<img alt="" src="' + o.Image + '">' +
+                        '<h2>@currencyUnit' + o.Price + '</h2>' +
+                        '<p>' + o.ProductName + '</p>' +
+                        '</a>' +
+                        '<a class="btn btn-default add-to-cart" href="javascript:void(0)" onClick="addToCart(\'' + o.Id + '\')"><i class="fa fa-shopping-cart"></i>Add to cart</a>' +
+                        '</div></div></div></div>';
+                });        
+                html += '<div class="clearfix"></div>';
+                html += '<ul class="pagination" id="pagination"></ul>';
+                $('#features_items').html(html);
+                pagination.render(response.Page, response.Index);
+            } else {
+                $('#features_items').html('');
+            }
         }
 
     </script>

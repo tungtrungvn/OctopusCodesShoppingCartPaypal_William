@@ -12,17 +12,19 @@
                         <h4 class="panel-title"><a href="@Url.Action("Index", "Home")" class="categoryItem" data-id="">@Resource.LabelDefaultCategoryItem</a></h4>
                     </div>
                 </div>
-                @*Get Category Which ParentId = null (Parent Category)*@
+                @*Loop through Category Which ParentId = null (Parent Category)*@
                 @foreach (var category in Model.Where(x => x.ParentId == null))
                 {
-                    //Get Category Which ParentId = ParentCategory (SubCategory)
+                    //Loop through Category Which ParentId = ParentCategory (SubCategory)
                     if (Model.Any(a => a.ParentId == category.Id))
                     {
                         <div class="panel-heading">
                             <h4 class="panel-title">
+                                @*Display Category Which ParentId = null (Parent Category)*@
                                 <a href="@Url.Action("Index","Home",new {id = category.Id})" class="categoryItem" data-id="@category.Id">
                                     @category.Name
                                 </a>
+                                @*If link below is clicked then it will trigger accordion to show div with id = Category_[category.Id]*@
                                 <a href="javascript:void(0)">
                                     <span data-target="#@("Category_" + category.Id)" data-toggle="collapse" class="badge pull-right"><i class="fa fa-plus"></i></span>
                                 </a>
@@ -33,6 +35,7 @@
                                 <ul>
                                     @foreach (var subCategory in Model.Where(x => x.ParentId == category.Id))
                                     {
+                                        @*Display SubCategory *@
                                         <li><a href="@Url.Action("Index", "Home", new { id = subCategory.Id})" class="categoryItem" data-id="@subCategory.Id">@subCategory.Name </a></li>
                                     }
                                 </ul>
@@ -41,6 +44,8 @@
                     }
                     else
                     {
+                        @*if there is no subcategory*@
+                        @*Display Category Which ParentId = null (Parent Category)*@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title"><a href="@Url.Action("Index", "Home", new { id = category.Id})" class="categoryItem" data-id="@category.Id">@category.Name</a></h4>
