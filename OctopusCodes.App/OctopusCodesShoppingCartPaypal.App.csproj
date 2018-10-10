@@ -159,21 +159,54 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-modal-carousel\bootstrap-modal-carousel.css" />
+    <Content Include="Content\bootstrap-modal-carousel\bootstrap-modal-carousel.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker3.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\datepicker\bootstrap-datepicker3.standalone.min.css" />
     <Content Include="Content\favicon.ico" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\default-img.png" />
+    <Content Include="Content\images\sites\bg_border.png" />
+    <Content Include="Content\images\sites\logo.png" />
+    <Content Include="Content\images\sites\map.png" />
+    <Content Include="Content\images\sites\new.png" />
+    <Content Include="Content\images\sites\partner1.png" />
+    <Content Include="Content\images\sites\partner2.png" />
+    <Content Include="Content\images\sites\partner3.png" />
+    <Content Include="Content\images\sites\partner4.png" />
+    <Content Include="Content\images\sites\pricing.png" />
+    <Content Include="Content\images\sites\sale.png" />
+    <Content Include="Content\images\sites\searchicon.png" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\metisMenu.min.css" />
+    <Content Include="Content\morris.css" />
     <Content Include="Content\prettyPhoto.css" />
     <Content Include="Content\price-range.css" />
     <Content Include="Content\responsive.css" />
+    <Content Include="Content\sb-admin-2.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\timeline.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap-modal-carousel\bootstrap-modal-carousel.js" />
+    <Content Include="Scripts\bootstrap-modal-carousel\bootstrap-modal-carousel.min.js" />
+    <Content Include="Scripts\bootstrap-modal-carousel\demo.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\cart.js" />
+    <Content Include="Scripts\common.js" />
     <Content Include="Scripts\datatables\dataTables.bootstrap.css" />
     <Content Include="Scripts\datatables\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\datatables\dataTables.responsive.css" />
@@ -182,9 +215,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\OctopusCodesShoppingCartPaypal_William.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\datepickers\bootstrap-datepicker.js" />
+    <Content Include="Scripts\datepickers\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\datepickers\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\datepickers\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\datepickers\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\gmaps.js" />
+    <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -192,13 +236,24 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.scrollUp.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js.cookie.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\metisMenu.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\morris.min.js" />
+    <Content Include="Scripts\price-range.js" />
+    <Content Include="Scripts\raphael-min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sb-admin-2.js" />
+    <Content Include="Scripts\site.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +284,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_SplitLayout.cshtml" />
+    <Content Include="Views\Category\_CategoryMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -242,7 +299,6 @@
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Cart\" />
-    <Folder Include="Views\Category\" />
     <Folder Include="Views\Orders\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
