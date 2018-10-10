@@ -1,6 +1,8 @@
 ﻿@using OctopusCodesShoppingCartPaypal.Core.Models.Orders
 @using OctopusCodesShoppingCartPaypal.Core.Provider
 @using OctopusCodesShoppingCartPaypal.Core.Resources
+@using OctopusCodesShoppingCartPaypal.Core.Models.MessageModels
+
 @{
     var settings = new Dictionary<string, string>();
     if (ViewBag.BaseSetting != null)
@@ -91,6 +93,19 @@
     </header>
     <section id="container-wrapper">
         <div class="container">
+            @*Add By William*@
+            @*Description : Add div notify-wrapper to show alert, for example if product not found*@
+            <div class="panel-body " id="notify-wrapper">
+                @if (TempData.Keys.Contains(Constants.NotifyMessage))
+                {
+                    var message = (NotifyModel)TempData[Constants.NotifyMessage];
+                    <div class="alert @(message.Result ? "alert-success" : "alert-danger") alert-dismissable">
+                        <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <span class="alert-content">@message.Message</span>
+                    </div>
+                }
+            </div>
+            @*Add By William*@
             <div class="row">
                 @Html.Action("GetMenu", "Category")
                 <div class="col-sm-9 padding-right">

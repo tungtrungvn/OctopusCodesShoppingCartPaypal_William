@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OctopusCodesShoppingCartPaypal.Core.Models.MessageModels;
 
 namespace OctopusCodes.App.Controllers
 {
@@ -80,21 +81,48 @@ namespace OctopusCodes.App.Controllers
             return View();
         }
 
+        //http://octopuscodesshoppingcartpaypal_william/Home/Detail/1036
+        //id = 1036 (productId)
         public ActionResult Detail(int? id)
         {
+            ///imgPath = Upload/Product
             var imgPath = Constants.ImagePath + "/";
+
+            //if id is null
+            //Example : http://octopuscodesshoppingcartpaypal_william/Home/Detail/ instead of http://octopuscodesshoppingcartpaypal_william/Home/Detail/1
             if (!id.HasValue)
             {
-                TempData[Constants.NotifyMessage] = string.Format(Resource.MsgIsNotFound, "Product item");
+                //https://stackoverflow.com/questions/10487008/mvc-c-sharp-tempdata
+                //TempData is meant to be a very short-lived instance, and you should only use it during the current and the subsequent requests only!
+
+                //public const string NotifyMessage = "MessageError";
+                //MsgIsNotFound	-> {0} is not found	
+
+                //Change By William
+                //Description : Change code in line 100 to 101 -> so that we can use notifyModel (Result, Message) instead of only string
+                //TempData[Constants.NotifyMessage] = string.Format(Resource.MsgIsNotFound, "Product item");    //From
+                TempData[Constants.NotifyMessage] = new NotifyModel() { Result = false, Message = string.Format(Resource.MsgIsNotFound, "Product item") };  //To
+                //Change By William
+
                 return RedirectToAction("index");
             }
+
+            //Find product by Id
             var entity = _productService.FindById(id.Value);
+
+            //If product not found or product status is out of stock (3)
             if (entity == null || entity.Status == (int)Constants.EnumProductStatus.OutOfStock)
             {
-                TempData[Constants.NotifyMessage] = string.Format(Resource.MsgIsNotFound, "Product item");
+                //Change By William
+                //Description : Change code in line 100 to 101 -> so that we can use notifyModel (Result, Message) instead of only string
+                //TempData[Constants.NotifyMessage] = string.Format(Resource.MsgIsNotFound, "Product item");    //From
+                TempData[Constants.NotifyMessage] = new NotifyModel() { Result = false, Message = string.Format(Resource.MsgIsNotFound, "Product item") };  //To
+                //Change By William
                 return RedirectToAction("index");
             }
+            //If there are images of the product then select image path. Otherwise new List<string>
             var imgProducts = entity.Images.Any() ? entity.Images.Select(a => imgPath + a.Name).ToList() : new List<string>();
+            //Set model (instance of ProductDetailViewModel) by converting product attribute to model attribute
             var model = new ProductDetailViewModel()
             {
                 Id = entity.Id,
@@ -103,7 +131,9 @@ namespace OctopusCodes.App.Controllers
                 Description = entity.Description,
                 ProductName = entity.Name,
                 Status = Constants.ProductStatusDictionary[entity.Status],
+                //if there are any product image then display imgProducts.ToArray() otherwise null
                 Imgs = imgProducts.Any() ? imgProducts.ToArray() : null,
+                //If there is image with field Main == true then display it otherwise display any first image 
                 MainImg =
                     entity.Images.Any(a => a.Main == true)
                         ? imgPath + entity.Images.First(a => a.Main == true).Name

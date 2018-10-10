@@ -280,6 +280,7 @@
     <Content Include="Upload\Product\little_red_hot20160722021543.jpg" />
     <Content Include="Upload\Product\math_made_easy_fourth_grade_workbook20160722021209.jpg" />
     <Content Include="Upload\Product\nokia_lumia_120160722025636.jpg" />
+    <Content Include="Upload\Product\nokia_lumia_120181010103143.jpg" />
     <Content Include="Upload\Product\nokia_lumia_220160722025659.jpg" />
     <Content Include="Upload\Product\nokia_x220160722025721.jpg" />
     <Content Include="Upload\Product\nokia_xl20160722025746.jpg" />
@@ -327,6 +328,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_SplitLayout.cshtml" />
     <Content Include="Views\Category\_CategoryMenu.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

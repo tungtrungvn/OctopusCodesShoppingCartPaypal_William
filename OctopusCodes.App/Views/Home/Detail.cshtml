@@ -1,0 +1,79 @@
+﻿@using OctopusCodesShoppingCartPaypal.Core.Provider
+@using OctopusCodesShoppingCartPaypal.Core.Resources
+@model OctopusCodesShoppingCartPaypal.Core.Models.Products.ProductDetailViewModel
+@{
+    ViewBag.Title = "Detail";
+    //public const string UserSplitLayOut = "~/Views/Shared/_SplitLayout.cshtml";
+    Layout = Constants.UserSplitLayOut;
+    //public const string SettingCurrencyUnit = "$";
+    var currencyUnit = Constants.SettingCurrencyUnit;
+}
+
+<div class="product-details">
+    <!--product-details-->  
+    <div class="col-sm-5">
+        <div class="view-product">
+            @*Main Image*@
+            <img src="@(Model.MainImg)" alt="@Model.MainImg" />
+        </div>
+
+        @*Change By William*@
+        @*Description : Change html to render carousel. Previously carousel not work*@
+        @*<div id="similar-product" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item">
+                    @for (int i = 0; i < Model.Imgs.Length; i++)
+                    {
+
+                        <a href=""><img src="@( Model.Imgs[i])" alt="@Model.Imgs[i]"></a>
+                    }
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left item-control" href="#similar-product" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right item-control" href="#similar-product" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>*@
+        <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                @for (int i = 0; i < Model.Imgs.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        <div class="item active">
+                            <a href=""><img src="@( Model.Imgs[i])" alt="@Model.Imgs[i]"></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="item">
+                            <a href=""><img src="@( Model.Imgs[i])" alt="@Model.Imgs[i]"></a>
+                        </div>
+                    }
+                }
+            </div>
+            @*Change By William*@
+
+            <!-- Controls -->
+            <a class="left item-control" href="#similar-product" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right item-control" href="#similar-product" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-7">
+        <div class="product-information">
+
+        </div>
+    </div>
