@@ -1,7 +1,128 @@
-﻿
+﻿@using OctopusCodesShoppingCartPaypal.Core.Provider
+@using OctopusCodesShoppingCartPaypal.Core.Resources
 @{
-    ViewBag.Title = "Index";
+    //GET : TitleUserHomePage from Resource
+    //-----------------------------------
+    //Name                  Value
+    //TitleUserHomePage     Home Page
+    ViewBag.Title = Resource.TitleUserHomePage;
+
+    //GET : UserSplitLayout constant value
+    //-----------------------------------
+    //UserSplitLayOut = "~/Views/Shared/_SplitLayout.cshtml";
+    Layout = Constants.UserSplitLayOut;
+
+    //CALL : code below from BaseController
+    //-----------------------------------
+    //ViewBag.BaseSetting = GetBaseSetting();
+    //protected Dictionary<string, string> GetBaseSetting()
+    //{
+    //    return _settingService.GetAll()
+    //        .Where(a => a.Type.Equals("BaseSetting"))
+    //        .ToDictionary(a => a.Id, a => a.Value);
+    //}
+
+    //Table : dbo.Setting
+    //ID - Value - Type
+    //===========================================================
+    //LogoImage - /Content/logo.png - BaseSetting
+    //PageNumbers - 9 - BaseSetting
+    //WebsiteName -Shopping Cart with Paypal Payment - BaseSetting
+    //YourEmail - octopuscodes @gmail.com - BaseSetting
+    var settings = (Dictionary<string, string>)ViewBag.BaseSetting;
+
+    //GET : SettingCurrencyUnit Constant Value
+    //-----------------------------------------
+    //SettingCurrencyUnit = "$";
+    var currencyUnit = Constants.SettingCurrencyUnit;
 }
 
-<h2>Index</h2>
+@*SET : hidden html with id = categoryId*@
+<input type="hidden" value="" id="categoryId" />
+
+@*FEATURES ITEMS DIV*@
+<div class="features_items" id="features_items">
+    <ul class="pagination" id="pagination"></ul>
+</div>
+@*FEATURES ITEMS DIV*@
+
+@*SCRIPT SECTION*@
+@section scripts{
+    
+@*Call this JS below (datatables)
+----------------------------------------------
+"~/Scripts/datatables/jquery.dataTables.js",
+"~/Scripts/datatables/dataTables.bootstrap.min.js"*@
+@Scripts.Render("~/bundles/datatables")
+    <script>
+        //(null,1) -> means load items without specifying category
+        //It is loaded for the first time
+        loadItems(null, 1);
+        function loadItems(category, index) {
+            //variable params has attribute Size and CategoryId
+            var params = getparams(category);
+            //we add attribute Index to variable params
+            //params now has attribute Size,CategoryId,Index
+            params.Index = index;
+            //call ajax via post methodd and pass params
+            $.ajax({
+                ur: '/Home/GetItems',
+                type: 'Post',
+                data: params,
+                success: function (response) {
+    //on success then call method drawItems
+    //---------------------------------------
+    //drawItems = create html element to display json result
+    //response = json format of datatable
+    //index = index passed in method loadItems
+    //params.categoryId = categoryId that is fetched from getparams
+
+    //In real condition, method drawItems just receive parameter response, but it still can be called in javascript
+    //index and params.categoryId will be undefined because it is not specified in drawItems method
+    //Code below is the same as drawItems(response);
+    //https://www.w3schools.com/js/js_function_parameters.asp
+                    drawItems(response, index, params.categoryId);
+                }
+            })
+        }
+
+        function getparams(category) {
+            //There is 2 possibilities with this code
+            //1) IF category == null then get category from html element with id = categoryId. 
+                //if application is loaded for the first time then $('#categoryId').val() = null / undefined
+
+            //2) IF in case categoryId is null/undefined from code below then (it can be id is not registered in db), then system will get category from $('#categoryId').val() which is current category that is displayed (<input type="hidden" value="" id="categoryId">) which means user still see the same page which show product of current category as before
+
+                //In index.cshtml, there is code below (line 86 - OctopusCodesShoppingCartPaypal) that call function loadItems(category,index)
+                /*
+                $(function() {
+                    $('#categoryMenu').on('click', '.categoryItem', function (e) {
+                        e.preventDefault();
+                        var $this = $(this);
+                        var categoryId = $this.data('id');
+                        $('#categoryId').val(categoryId);
+                        loadItems(categoryId, 1);
+                    });
+                });
+                */
+
+            if (category == undefined) {
+                category = $('#categoryId').val();
+            }
+            var datatableRequest = {
+                //get PageNumbers from table Setting : 9
+                //We pass Page Size and Category Id for datatablerequest
+
+                Size: "@settings["PageNumbers"]",
+                categoryId: category,
+            };
+            return datatableRequest;
+        }
+
+        function drawItems(response) {
+
+        }
+
+    </script>
+}
 
