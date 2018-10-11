@@ -1222,6 +1222,8 @@ h2.title {
     /*Description : make image in carousel center and full size. Reference https://bootstrapstudio.io/forums/topic/how-do-you-center-an-image-in-a-carousel/*/
     /*margin-left: 15px;*/
     margin: auto;
+    max-height: 178px;
+    max-width: 255px;
     /*Change By William*/
 }
 
