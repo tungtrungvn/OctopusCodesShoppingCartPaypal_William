@@ -332,6 +332,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\_LoginPartial.cshtml" />
     <Content Include="Views\Account\_RegisterPartial.cshtml" />
+    <Content Include="Views\User\Profile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -346,7 +347,6 @@
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Orders\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OctopusCodesShoppingCartPaypal.Core\OctopusCodesShoppingCartPaypal.Core.csproj">
