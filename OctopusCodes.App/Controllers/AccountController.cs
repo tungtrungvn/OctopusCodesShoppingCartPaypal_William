@@ -45,17 +45,21 @@ namespace OctopusCodes.App.Controllers
         //
         // POST: /Account/Login
         [HttpPost]
+        //Any unauthenticated user can access this page
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SignIn(UserLoginViewModel model, string returnUrl)
         {
-
+            
             if (ModelState.IsValid)
             {
+                //encrypt password using md5 hash algorithm
                 var pwd = UtilEncrypt.GetMd5Hash(model.Password);
+                //get account of specified username and password
                 var acc = _userService.GetAll().FirstOrDefault(a => a.Username.Equals(model.UserName) && a.Password.Equals(pwd));
                 if (acc != null)
                 {
+                    //if account found then store cookie
                     StoreCookie(acc);
                     if (string.IsNullOrWhiteSpace(returnUrl)) return RedirectToAction("Index", "Home");
                     return Redirect(returnUrl);
@@ -134,6 +138,14 @@ namespace OctopusCodes.App.Controllers
 
         private void StoreCookie(Account acc)
         {
+            /*
+            public MyAccount(string username, string fullname, string roles)
+            {
+                this.username = username;
+                this.fullname = fullname;
+                this.roles = roles;
+            }
+            */
             var ma = new MyAccount();
             ma.Username = acc.Username;
             ma.Fullname = acc.FullName;
